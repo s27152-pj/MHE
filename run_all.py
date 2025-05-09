@@ -121,6 +121,7 @@ def run_comparison_experiment(items, capacity, suppress):
         sys.stdout = sys.__stdout__
 
     plot_comparison_results(results)
+    plot_convergence_curves(ga_convergences)
 
 
 def plot_comparison_results(results):
@@ -145,6 +146,17 @@ def plot_comparison_results(results):
     plt.xticks(range(5))
     plt.legend()
 
+    plt.tight_layout()
+    plt.show()
+
+def plot_convergence_curves(convergences):
+    plt.figure(figsize=(8, 4))
+    for idx, convergence in enumerate(convergences):
+        plt.plot(convergence, label=f'Uruchomienie {idx+1}')
+    plt.title("Krzywa zbieżności - Algorytm Genetyczny")
+    plt.xlabel("Pokolenie")
+    plt.ylabel("Najlepsza wartość")
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
