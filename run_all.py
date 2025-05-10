@@ -169,7 +169,7 @@ def main():
     parser.add_argument("--algorithm", type=str, choices=["enum", "hcd", "hcr", "tabu", "sa", "ga", "compare"], default="compare")
     parser.add_argument("--max_iterations", type=int, default=500)
 
-    parser.add_argument("--tabu_size", type=int, default=None)
+    parser.add_argument("--tabu_size", type=int, default=0)
     parser.add_argument("--allow_backtrack", type=int, choices=[0, 1], default=0)
 
     parser.add_argument("--cooling_schedule", type=str, choices=["exponential", "linear"], default="exponential")

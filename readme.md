@@ -39,6 +39,7 @@ Projekt wywołujemy za pomocą linii komend
 python run_all.py data/input.txt 
 ```
 Oraz dodajemy wartości
+* '''--capacity (liczba)''' - wybieramy pojemność plecaka
 * ```--algorithm enum/hcd/hcr/tabu/sa/ga/compare``` - wybieramy jaki algorytm zostanie uruchomiony
 * ```--max_iteration (liczba)``` - określamy maksymalną liczbę iteracji
 * ```--tabu_size (liczba)``` - określamy maksymalną liczbę tablicy tabu, **Alg. tabu**
@@ -71,14 +72,14 @@ Oraz dodajemy wartości
 
 ## Przykładowe uruchomienie algorytmów
 * full_enumeration
-    * ```python run_all.py data/input.txt --algorithm enum --max_iteration 1000```
+    * ```python run_all.py data/input.txt --algorithm enum --capacity 55 --max_iteration 1000```
 * hill_climbing
-    * ```python run_all.py data/input.txt --algorithm hcr --max_iteration 1000```
+    * ```python run_all.py data/input.txt --algorithm hcr --capacity 55 --max_iteration 1000```
 * tabu_search
-    * ```python run_all.py data/input.txt --algorithm tabu --max_iteration 1000 --tabu_size 0 --allow_backtrack 0```
+    * ```python run_all.py data/input.txt --algorithm tabu --capacity 55 --max_iteration 1000 --tabu_size 0 --allow_backtrack 0```
 * simulated_annealing
-    * ```python run_all.py data/input.txt --algorithm sa --max_iteration 1000 --cooling_schedule linear --alpha 0```
+    * ```python run_all.py data/input.txt --algorithm sa --capacity 55 --max_iteration 1000 --cooling_schedule linear --alpha 0```
 * genetic_algorithm
-    * ```python run_all.py data/input.txt --algorithm ga --population_size 25 --max_generations 40 --elite_size 2 --crossover_method one_point --mutation_method swap --stop_condotion max_generations```
+    * ```python run_all.py data/input.txt --algorithm ga --capacity 55 --population_size 25 --max_generations 40 --elite_size 2 --crossover_method one_point --mutation_method swap --stop_condotion max_generations```
 * compare
-    * ```python run_all.py data/input.txt --algorithm compare --suppress 1```
+    * ```python run_all.py data/input.txt --algorithm compare --capacity 55 --suppress 1```
